@@ -29,7 +29,7 @@ class CheckoutActivityKotlin : AppCompatActivity() {
      * To run this app, follow the steps here: https://github.com/stripe-samples/accept-a-card-payment#how-to-run-locally
      */
     // 10.0.2.2 is the Android emulator's alias to localhost
-    private val backendUrl = "http://10.0.2.2:4242/"
+    private val backendUrl = "https://hhqhp.sse.codesandbox.io/"
     private val httpClient = OkHttpClient()
     private lateinit var publishableKey: String
     private lateinit var paymentIntentClientSecret: String
@@ -111,7 +111,7 @@ class CheckoutActivityKotlin : AppCompatActivity() {
                         // PaymentIntent details.
                         // For added security, our sample app gets the publishable key
                         // from the server.
-                        publishableKey = responseJson.getString("publishableKey")
+                        publishableKey = responseJson.getString("publicKey")
                         paymentIntentClientSecret = responseJson.getString("clientSecret")
 
                         // Configure the SDK with your Stripe publishable key so that it can make

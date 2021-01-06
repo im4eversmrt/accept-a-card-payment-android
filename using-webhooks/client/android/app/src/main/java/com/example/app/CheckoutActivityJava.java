@@ -45,7 +45,7 @@ public class CheckoutActivityJava extends AppCompatActivity {
      * To run this app, follow the steps here: https://github.com/stripe-samples/accept-a-card-payment#how-to-run-locally
      */
     // 10.0.2.2 is the Android emulator's alias to localhost
-    private static final String BACKEND_URL = "http://10.0.2.2:4242/";
+    private static final String BACKEND_URL = "https://hhqhp.sse.codesandbox.io/";
 
     private OkHttpClient httpClient = new OkHttpClient();
     private String paymentIntentClientSecret;
@@ -126,7 +126,7 @@ public class CheckoutActivityJava extends AppCompatActivity {
         // The response from the server includes the Stripe publishable key and
         // PaymentIntent details.
         // For added security, our sample app gets the publishable key from the server
-        String stripePublishableKey = responseMap.get("publishableKey");
+        String stripePublishableKey = responseMap.get("publicKey");
         paymentIntentClientSecret = responseMap.get("clientSecret");
 
         // Configure the SDK with your Stripe publishable key so that it can make requests to the Stripe API
